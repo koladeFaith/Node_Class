@@ -1,0 +1,9 @@
+// Step 1 - install note(npm init -y)
+// Step 2 - install express(npm install express)
+// step 3 - Trigger express by storing it in a variable (const express = require('express), const app = expres())
+// Note is a runtime environment while exprees is a server side framework
+// To create my own port number (
+// app.listen(3000, ()=>{
+//     console.log('App is running on port 3000')               })
+// )
+// app.get takes in two parameters the path and the arrow function
