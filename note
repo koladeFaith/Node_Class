@@ -1,5 +1,8 @@
 // Step 1 - install note(npm init -y)
 // Step 2 - install express(npm install express)
+// Step 2 - install express(npm install mongodb)
+// Step 2 - install express(npm install mongoose)
+
 // step 3 - Trigger express by storing it in a variable (const express = require('express), const app = expres())
 // Note is a runtime environment while exprees is a server side framework
 // To create my own port number (

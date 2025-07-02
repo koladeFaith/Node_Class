@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I am Dashboard</h1>
+    <p>My name is <%= name.oruko %> and I am <%= name.age %> years old</p>
+    <% for( let index = 0; index < info.length; index++ ) { %>
+        <p><%= index+1 %>. <%= info[index].name %></p>
+    <% } %>
+
+    <% if (score >= 0) { %>
+        <p>Fail</p>
+    <% } %>
+</body>
+</html>
