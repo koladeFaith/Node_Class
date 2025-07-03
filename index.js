@@ -94,12 +94,22 @@ require('dotenv').config()
 
 const uri = process.env.URI
 mongoose.connect(uri)
-const userSchema = new mongoose({
-    firstName: { type: string },
-    firstName: { type: string },
-    firstName: { type: string },
-    password: { type: string }
+const userSchema = new mongoose.Schema({
+    firstName: { type: String },
+    firstName: { type: String },
+    firstName: { type: String },
+    password: { type: String }
 
+})
+const userModel = mongoose.model('myUsers', userSchema)
+app.post('/submit', async (req, res) => {
+    try {
+        const data = new userModel(req.body)
+        await data.save()
+        res.status(201).json({ message: data })
+    } catch (error) {
+        res.status(501).json({ message: error })
+    }
 })
 app.listen(port, () => {
     console.log('app is working');
