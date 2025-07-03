@@ -88,10 +88,19 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const mongoose = require('mongoose')
 const express = require('express');
-const port = 5505
+const port = process.env.port
 const app = express()
-const uri = "mongodb+srv://koladefaith1000:wW36SMKbAljlJCAX@cluster0.xxzirgw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+require('dotenv').config()
 
+const uri = process.env.URI
+mongoose.connect(uri)
+const userSchema = new mongoose({
+    firstName: { type: string },
+    firstName: { type: string },
+    firstName: { type: string },
+    password: { type: string }
+
+})
 app.listen(port, () => {
     console.log('app is working');
 
