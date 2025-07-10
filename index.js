@@ -95,10 +95,10 @@ require('dotenv').config()
 const uri = process.env.URI
 mongoose.connect(uri)
 const userSchema = new mongoose.Schema({
-    firstName: { type: String },
-    firstName: { type: String },
-    firstName: { type: String },
-    password: { type: String }
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true }
 
 })
 const userModel = mongoose.model('myUsers', userSchema)
